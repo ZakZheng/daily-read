@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入样式 -->
+    <title>10月9日---考试</title>
+    <link href="../lib/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="weui-cells weui-cells_form" style="z-index:0" ref="form">
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="中括号" 
+          @input="matchInput($event,0,'[]')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('[]')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="苹果的读法" 
+          @input="matchInput($event,1,'apple')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('apple')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    </div>
+      <div class="js_dialog" @click="hideHint" ref="js_dialog" style="display: none; opacity: 0">
+          <div class="weui-mask"></div>
+          <div class="weui-dialog">
+              <div class="weui-dialog__bd" ref="hintMessage"></div>
+              <div class="weui-dialog__ft">
+                  <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+              </div>
+          </div>
+      </div>
+    </div>
+  </body>
+  <!-- 先引入 Vue -->
+  <script src="../lib/vue.min.js"></script>
+  <!-- 引入组件库 -->
+  <script src="../lib/index.js"></script>
+  
+  
+<script>
+new Vue({
+  el: '#app',
+  methods: {
+    handleClick: function() {
+      this.$toast('Hello world!')
+    },
+    matchInput ($event,index,val) {
+      let _self = this.$refs.form.children[index]
+      if(val.trim() === 'undefined'){
+        this.replaceClass(_self, 'weui-cell_warn', 'weui-cell_success')
+        this.replaceClass(_self.querySelectorAll('i')[0], 'weui-icon-warn', 'weui-icon-success')
+      }
+      else{
+        if($event.target.value.trim() === val) {
+          this.replaceClass(_self, 'weui-cell_warn', 'weui-cell_success')
+          this.replaceClass(_self.querySelectorAll('i')[0], 'weui-icon-warn', 'weui-icon-success')
+        }else{
+          this.replaceClass(_self, 'weui-cell_success', 'weui-cell_warn')
+          this.replaceClass(_self.querySelectorAll('i')[0], 'weui-icon-success', 'weui-icon-warn')
+        }
+      }
+    },
+    openHint(val) {
+      this.$refs.js_dialog.style.transition = 'opacity .3s'
+      this.$refs.hintMessage.zIndex = 10000
+      this.$refs.hintMessage.innerText = val
+      this.$refs.js_dialog.style.display = 'block'
+      setTimeout(()=>{
+        this.$refs.js_dialog.style.opacity = 1
+      },20)
+    },
+    hideHint() {
+      this.$refs.js_dialog.style.opacity = 0
+      setTimeout(()=>{
+        this.$refs.js_dialog.style.display = 'none'
+      },300)
+    },
+    replaceClass(el, oldClass, newClass){
+      let className = el.className
+      let arr = className.split(' ')
+      let index = arr.indexOf(oldClass)
+      arr.splice(index,1,newClass)
+      el.className = arr.join(" ")
+    }
+  }
+})
+</script>
+
+</html>
