@@ -6,5 +6,9 @@
   {
     "title": "苹果的读法",
     "answer": "apple"
+  },
+  {
+    "title": "ios滑动流畅",
+    "answer": "-webkit-overflow-scrolling: touch;"
   }
 ]
