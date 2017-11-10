@@ -1,14 +1,110 @@
 [
   {
-    "title": "中括号",
-    "answer": "[]"
-  },
-  {
-    "title": "苹果的读法",
-    "answer": "apple"
-  },
-  {
     "title": "ios滑动流畅",
     "answer": "-webkit-overflow-scrolling: touch;"
+  },
+  {
+    "title": "公用事业",
+    "answer": "utilities"
+  },
+  {
+    "title": "临时，暂时",
+    "answer": "temp"
+  },
+  {
+    "title": "操作",
+    "answer": "operation"
+  },
+  {
+    "title": "卸载",
+    "answer": "offload"
+  },
+  {
+    "title": "执行",
+    "answer": "execution"
+  },
+  {
+    "title": "退出",
+    "answer": "quit"
+  },
+  {
+    "title": "容器",
+    "answer": "container"
+  },
+  {
+    "title": "选项",
+    "answer": "options"
+  },
+  {
+    "title": "连续",
+    "answer": "continuous"
+  },
+  {
+    "title": "未定义",
+    "answer": "undefined"
+  },
+  {
+    "title": "方向 指导 趋势",
+    "answer": "direction"
+  },
+  {
+    "title": "自然的 天生的",
+    "answer": "natural"
+  },
+  {
+    "title": "循环 周期 圆",
+    "answer": "circle"
+  },
+  {
+    "title": "移动",
+    "answer": "move"
+  },
+  {
+    "title": "持续",
+    "answer": "duration"
+  },
+  {
+    "title": "间隔",
+    "answer": "interval"
+  },
+  {
+    "title": "捕捉",
+    "answer": "capturing"
+  },
+  {
+    "title": "下决心 做出决定",
+    "answer": "determine"
+  },
+  {
+    "title": "垂直的",
+    "answer": "vertically"
+  },
+  {
+    "title": "地方 住所 座位",
+    "answer": "place"
+  },
+  {
+    "title": " 在…以前 直到…时",
+    "answer": "until"
+  },
+  {
+    "title": "监听器",
+    "answer": "listeners"
+  },
+  {
+    "title": "引发 触发 扳机",
+    "answer": "trigger"
+  },
+  {
+    "title": "开始",
+    "answer": "begin"
+  },
+  {
+    "title": "延时",
+    "answer": "delay"
+  },
+  {
+    "title": "转换为大写",
+    "answer": "toUpperCase"
   }
 ]

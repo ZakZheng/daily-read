@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入样式 -->
+    <title>10月10日---考试</title>
+    <link href="../lib/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="weui-cells weui-cells_form" style="z-index:0" ref="form">
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="ios滑动流畅" 
+          @input="matchInput($event,0,'-webkit-overflow-scrolling: touch;')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('-webkit-overflow-scrolling: touch;')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="公用事业" 
+          @input="matchInput($event,1,'utilities')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('utilities')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="临时，暂时" 
+          @input="matchInput($event,2,'temp')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('temp')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="操作" 
+          @input="matchInput($event,3,'operation')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('operation')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="卸载" 
+          @input="matchInput($event,4,'offload')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('offload')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="执行" 
+          @input="matchInput($event,5,'execution')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('execution')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="退出" 
+          @input="matchInput($event,6,'quit')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('quit')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="容器" 
+          @input="matchInput($event,7,'container')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('container')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="选项" 
+          @input="matchInput($event,8,'options')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('options')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="连续" 
+          @input="matchInput($event,9,'continuous')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('continuous')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="未定义" 
+          @input="matchInput($event,10,'undefined')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('undefined')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="方向 指导 趋势" 
+          @input="matchInput($event,11,'direction')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('direction')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="自然的 天生的" 
+          @input="matchInput($event,12,'natural')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('natural')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="循环 周期 圆" 
+          @input="matchInput($event,13,'circle')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('circle')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="移动" 
+          @input="matchInput($event,14,'move')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('move')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="持续" 
+          @input="matchInput($event,15,'duration')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('duration')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="间隔" 
+          @input="matchInput($event,16,'interval')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('interval')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="捕捉" 
+          @input="matchInput($event,17,'capturing')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('capturing')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="下决心 做出决定" 
+          @input="matchInput($event,18,'determine')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('determine')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="垂直的" 
+          @input="matchInput($event,19,'vertically')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('vertically')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="地方 住所 座位" 
+          @input="matchInput($event,20,'place')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('place')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder=" 在…以前 直到…时" 
+          @input="matchInput($event,21,'until')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('until')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="监听器" 
+          @input="matchInput($event,22,'listeners')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('listeners')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="引发 触发 扳机" 
+          @input="matchInput($event,23,'trigger')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('trigger')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="开始" 
+          @input="matchInput($event,24,'begin')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('begin')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="延时" 
+          @input="matchInput($event,25,'delay')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('delay')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    
+  <div class="weui-cell weui-cell_warn">
+      <div class="weui-cell__bd">
+          <input 
+          class="weui-input" 
+          placeholder="转换为大写" 
+          @input="matchInput($event,26,'toUpperCase')"
+          >
+      </div>
+      <div class="weui-cell__ft" @click="openHint('toUpperCase')">
+          <i class="weui-icon-warn"></i>
+      </div>
+  </div>
+    </div>
+      <div class="js_dialog" @click="hideHint" ref="js_dialog" style="display: none; opacity: 0">
+          <div class="weui-mask"></div>
+          <div class="weui-dialog">
+              <div class="weui-dialog__bd" ref="hintMessage"></div>
+              <div class="weui-dialog__ft">
+                  <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+              </div>
+          </div>
+      </div>
+    </div>
+  </body>
+  <!-- 先引入 Vue -->
+  <script src="../lib/vue.min.js"></script>
+  <!-- 引入组件库 -->
+  <script src="../lib/index.js"></script>
+  
+  
+<script>
+new Vue({
+  el: '#app',
+  methods: {
+    handleClick: function() {
+      this.$toast('Hello world!')
+    },
+    matchInput ($event,index,val) {
+      let _self = this.$refs.form.children[index]
+      if(val.trim() === 'undefined'){
+        this.replaceClass(_self, 'weui-cell_warn', 'weui-cell_success')
+        this.replaceClass(_self.querySelectorAll('i')[0], 'weui-icon-warn', 'weui-icon-success')
+      }
+      else{
+        if($event.target.value.trim() === val) {
+          this.replaceClass(_self, 'weui-cell_warn', 'weui-cell_success')
+          this.replaceClass(_self.querySelectorAll('i')[0], 'weui-icon-warn', 'weui-icon-success')
+        }else{
+          this.replaceClass(_self, 'weui-cell_success', 'weui-cell_warn')
+          this.replaceClass(_self.querySelectorAll('i')[0], 'weui-icon-success', 'weui-icon-warn')
+        }
+      }
+    },
+    openHint(val) {
+      this.$refs.js_dialog.style.transition = 'opacity .3s'
+      this.$refs.hintMessage.zIndex = 10000
+      this.$refs.hintMessage.innerText = val
+      this.$refs.js_dialog.style.display = 'block'
+      setTimeout(()=>{
+        this.$refs.js_dialog.style.opacity = 1
+      },20)
+    },
+    hideHint() {
+      this.$refs.js_dialog.style.opacity = 0
+      setTimeout(()=>{
+        this.$refs.js_dialog.style.display = 'none'
+      },300)
+    },
+    replaceClass(el, oldClass, newClass){
+      let className = el.className
+      let arr = className.split(' ')
+      let index = arr.indexOf(oldClass)
+      arr.splice(index,1,newClass)
+      el.className = arr.join(" ")
+    }
+  }
+})
+</script>
+
+</html>

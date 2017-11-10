@@ -9,7 +9,7 @@ fs.readFile('./created.json', 'utf8', (err, data) => {
   if (!fs.existsSync(today)) {
     fs.mkdirSync(today)
   }
-  fs.writeFile(`./${today}/task.html`, base.html({
+  fs.writeFile(`./${today}/index.html`, base.html({
     today,
     item: item(data)
   }), (err) => {
